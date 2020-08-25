@@ -1,10 +1,17 @@
 - var page_title = "WISS 2020: 第28回インタラクティブシステムとソフトウェアに関するワークショップ"
+- var seo_title = "WISS 2020: 第28回インタラクティブシステムとソフトウェアに関するワークショップ"
+- var seo_base_url = "https://wiss.org/WISS2020/"
+- var seo_heading_phrase = "WISSは，インタラクティブシステムにおける未来を切り拓くような新しいアイデア・技術を議論するワークショップです．この分野において国内でもっともアクティブな学術会議のひとつであり，例年150名以上の参加者が朝から深夜まで活発で意義深い情報交換を行っています．さまざまなバックグラウンドをもった方々からの積極的な論文投稿及び参加をお待ちしています．"
 
 doctype html
 html(lang=ja)
   head
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    meta(name="twitter:card" content="summary")
+    meta(name="twitter:title" content=seo_title)
+    meta(name="twitter:description" content=seo_heading_phrase)
+    meta(name="twitter:url" content=seo_base_url)
     title #{page_title}
     include includes/bootstrap-css
   body
