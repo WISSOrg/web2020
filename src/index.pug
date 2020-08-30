@@ -9,8 +9,18 @@ html(lang=ja)
     title #{page_title}
     include includes/bootstrap-css
   body
-    div.container
-      hr
+    header
+      nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
+        .container
+          a(href="./").navbar-brand WISS 2020
+    .jumbotron
+      .jumbotron-background-image
+      .container
+        h1 WISS 2020
+        p.lead 第28回インタラクティブシステムとソフトウェアに関するワークショップ
+    .container
       include:markdown-it(html=true typographer=true) md/index.md
-      hr
+    footer
+      .container
+        p WISS 2020
     include includes/bootstrap-js
