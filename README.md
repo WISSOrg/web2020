@@ -12,6 +12,12 @@ WISS 2020 web page.
 - Easy-to-learn (for non-experts)
 - Easy-to-edit (for committee members)
 
+## Technical Choices
+
+- GitHub Pages for deploy
+- Pug + Sass for generating static pages
+- Markdown for main texts
+
 ## Prerequisite
 
 - npm
