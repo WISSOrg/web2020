@@ -1,8 +1,11 @@
 {
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-copy": "^4.0.1",
+    "gulp-pug": "^4.0.1",
     "jstransformer-markdown-it": "^2.1.0"
   },
   "scripts": {
-    "build": "sh build.sh"
+    "build": "npx gulp"
   }
 }
