@@ -21,7 +21,6 @@ WISS 2020 web page.
 ## Prerequisite
 
 - npm
-- pug-cli (`npm install pug-cli --global`)
 
 ## Install Dependencies
 
