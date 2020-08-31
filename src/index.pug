@@ -8,8 +8,7 @@ html(lang=ja)
     include includes/seo
     title #{page_title}
     include includes/bootstrap-css
-    style
-      include includes/override.css
+    link(rel="stylesheet" href="./css/override.css")
   body
     header
       nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
