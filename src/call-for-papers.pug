@@ -10,9 +10,8 @@ html(lang=ja)
     include includes/bootstrap-css
     link(rel="stylesheet" href="./css/override.css")
   body
-    .container
-      hr
+    include includes/header
+    .container.nav-padding
       include:markdown-it(html=true typographer=true) md/call-for-papers.md
-      hr
     include includes/footer
     include includes/bootstrap-js
