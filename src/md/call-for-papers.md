@@ -31,9 +31,9 @@ WISS2020では，予稿集はウェブのみでの公開となります．LaTeX�
   - 2017年までは論文投稿時点で「ロング論文」と「ショート論文」の種別がありましたが2018年からその種別を廃止しました．
 - 投稿原稿には著者名や所属を明記ください（シングルブラインド査読）．著者らの関連論文を Reference から削除する必要はありません．
 - 論文テンプレートは既定のものを利用してください:
-  - [論文テンプレート（Word）](/download/WISS_Template_2020_0825_word.docx)
+  - [論文テンプレート（Word）](./downloads/WISS_Template_2020_0825_word.docx)
   - [論文テンプレート（Overleaf）](https://www.overleaf.com/latex/templates/wiss2020-template/ytdfgqwtwgcs)
-  - [論文テンプレート（LaTeX2e）](/download/WISS_Template_2020_0825_latex.zip)
+  - [論文テンプレート（LaTeX2e）](./downloads/WISS_Template_2020_0825_latex.zip)
 - 査読方針および査読フォームも以下を参照してください:
   - [査読方針](./review-policy.html)
   - [査読フォーム](./review-form.html)
@@ -90,11 +90,12 @@ WISSでは伝統的に，「アイディアの斬新さ」及び「デモや実�
 
 ダウンロード時のブラウザはGoogle Chromeを推奨しています．（他ブラウザの場合文字化け等の不具合が生じる可能性があります．）
 
-- [WISS2020 MS Word 投稿用スタイルファイル](/download/WISS_Template_2020_0825_word.docx) (著者名及び所属を入れてください．)
+- [WISS2020 MS Word 投稿用スタイルファイル](./downloads/WISS_Template_2020_0825_word.docx) (著者名及び所属を入れてください．)
 - [論文テンプレート（Overleaf）](https://www.overleaf.com/latex/templates/wiss2020-template/ytdfgqwtwgcs)
-- [論文テンプレート（LaTeX2e）](/download/WISS_Template_2020_0825_latex.zip)(著者名及び所属を入れてください．Macご利用の方で，コンパイルに失敗する場合はソースコードをutf8に変更して試してみてください)
-- [WISS2020 論文よくあるミス一覧](/download/WISS_Template_2020_0825_errors.pdf)
+- [論文テンプレート（LaTeX2e）](./downloads/WISS_Template_2020_0825_latex.zip)(著者名及び所属を入れてください．Macご利用の方で，コンパイルに失敗する場合はソースコードをutf8に変更して試してみてください)
+- [WISS2020 論文よくあるミス一覧](./downloads/WISS_Template_2020_0825_errors.pdf)
 
+論文テンプレートに関する注意
 - 原稿フォーマットは下記の論文テンプレート（LaTeX2eのスタイルファイル，またはWordファイル）をご利用ください．PDFのファイルサイズは20Mバイト以下とします．
 - 原稿フォーマットが著しく異なる場合は不採択となる場合があります．
 - 注意：一部のWordにおいて項番号が画像で出力されることがあります．その場合は，テンプレート2.2.2項及び表1を参考に，項番号部分にスタイルの再指定（1.1.1 段落番号3を指定）を行ってください．それでも改善しない場合はお手数ですが，手打ちで項番号を付与してください．
