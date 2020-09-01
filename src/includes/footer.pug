@@ -34,7 +34,7 @@ footer
   .container
     .row
       each menu in menus
-        .col-sm
+        .col-4.col-sm
           h2 #{menu["category"]}
           if menu["pages"].length == 0
             p 準備中
@@ -44,5 +44,5 @@ footer
                 li
                   a(href=page["url"]) #{page["name"]}
     hr
-    p WISS 2020実行委員会
-    p Contribute to this page on <a href="https://github.com/WISSOrg/web2020">GitHub</a> (PRs welcome).
+    p.text-center &copy; WISS 2020実行委員会
+    p.text-center Contribute to this page on <a href="https://github.com/WISSOrg/web2020">GitHub</a> (PRs welcome).
