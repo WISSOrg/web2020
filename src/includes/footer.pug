@@ -1,3 +1,48 @@
+- 
+  var menus = [
+    {
+      category: "著者の方へ",
+      pages: [
+        { name: "論文募集", url: "./call-for-papers.html" },
+        { name: "査読方針", url: "./review-policy.html" },
+        { name: "査読フォーム", url: "./review-form.html" },
+      ],
+    },
+    {
+      category: "参加募集",
+      pages: [],
+    },
+    {
+      category: "プログラム",
+      pages: [],
+    },
+    {
+      category: "動画中継",
+      pages: [],
+    },
+    {
+      category: "予稿集",
+      pages: [],
+    },
+    {
+      category: "WISSについて",
+      pages: [],
+    },
+  ]
+
 footer
   .container
-    p WISS 2020
+    .row
+      each menu in menus
+        .col-4.col-sm
+          h2 #{menu["category"]}
+          if menu["pages"].length == 0
+            p 準備中
+          else
+            ul.list-unstyled
+              each page in menu["pages"]
+                li
+                  a(href=page["url"]) #{page["name"]}
+    hr
+    p.text-center &copy; WISS 2020実行委員会
+    p.text-center Contribute to this page on <a href="https://github.com/WISSOrg/web2020">GitHub</a> (PRs welcome).
