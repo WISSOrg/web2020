@@ -11,7 +11,7 @@ html(lang=ja)
     link(rel="stylesheet" href="./css/override.css")
   body
     include includes/header
-    .container.nav-padding
+    .container.nav-padding.content
       include:markdown-it(html=true typographer=true) md/call-for-papers.md
     include includes/footer
     include includes/bootstrap-js
