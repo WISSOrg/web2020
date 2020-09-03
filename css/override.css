@@ -15,9 +15,7 @@
   font-feature-settings: "palt" 1; }
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.8) !important;
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px); }
+  background-color: #282830 !important; }
 
 a {
   transition: ease-in-out color .10s; }
@@ -28,9 +26,23 @@ a:hover {
 h1, h2, h3, h4, h5 {
   font-weight: bold; }
 
+.content > h1 {
+  font-size: 2.4em;
+  margin-bottom: 32px; }
+
+.content > h2 {
+  font-size: 1.6em;
+  border-bottom: solid 2px #282830;
+  margin-top: 32px;
+  margin-bottom: 16px; }
+
+.content > h3 {
+  font-size: 1.2em;
+  margin-bottom: 12px; }
+
 body {
-  background-color: #fdfdfd;
-  color: rgba(0, 0, 0, 0.8); }
+  background-color: #f0f0fa;
+  color: #282830; }
 
 .jumbotron {
   overflow: hidden;
@@ -41,13 +53,13 @@ body {
   border-radius: 0rem; }
 
 .nav-padding {
-  padding-top: 100px; }
+  padding-top: 120px; }
 
 footer {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.8) !important;
+  background-color: #282830 !important;
   color: rgba(255, 255, 255, 0.6);
-  margin-top: 44px;
+  margin-top: 64px;
   padding-top: 6em;
   padding-bottom: 6em;
   font-size: 0.8rem; }
