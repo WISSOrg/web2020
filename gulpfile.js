@@ -20,6 +20,10 @@ gulp.task('sass', function(done) {
 gulp.task('copy', function(done) {
     gulp.src("src/downloads/**/*")
         .pipe(gulp.dest("dst/downloads"));
+    gulp.src("src/assets/**/*")
+        .pipe(gulp.dest("dst/assets"));
+    gulp.src("src/assets/originals/**/*")
+        .pipe(gulp.dest("dst/assets/thumbnails"));
     done();
 });
 
