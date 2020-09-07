@@ -10,7 +10,10 @@
     },
     {
       category: "参加募集",
-      pages: [],
+      pages: [
+        { name: "表紙デザイン募集", url: "./design-competition.html" },
+        { name: "（準備中）", url: "" },
+      ],
     },
     {
       category: "プログラム",
@@ -26,7 +29,10 @@
     },
     {
       category: "WISSについて",
-      pages: [],
+      pages: [
+        { name: "過去のWISS", url: "./archive.html" },
+        { name: "（準備中）", url: "" },
+      ],
     },
   ]
 
@@ -37,12 +43,14 @@ footer
         .col-4.col-sm
           h2 #{menu["category"]}
           if menu["pages"].length == 0
-            p 準備中
+            p （準備中）
           else
             ul.list-unstyled
               each page in menu["pages"]
-                li
-                  a(href=page["url"]) #{page["name"]}
+                if page["url"].length == 0
+                  li #{page["name"]}
+                else
+                  li <a href="#{page["url"]}">#{page["name"]}</a>
     hr
     p.text-center &copy; WISS 2020実行委員会
     p.text-center Contribute to this page on <a href="https://github.com/WISSOrg/web2020">GitHub</a> (PRs welcome).
