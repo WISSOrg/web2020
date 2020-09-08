@@ -8,5 +8,10 @@
   },
   "scripts": {
     "build": "npx gulp"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WISSOrg/web2020.git"
+  },
+  "license": "UNLICENSED"
 }
