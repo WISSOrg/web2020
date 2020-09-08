@@ -12,7 +12,13 @@
 
 * {
   font-family: 'Noto Sans Japanese', arial, sans-serif;
-  font-feature-settings: "palt" 1; }
+  font-feature-settings: "palt" 1;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto; }
 
 .navbar {
   background-color: #282830 !important; }
