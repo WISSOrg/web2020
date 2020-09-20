@@ -1,10 +1,18 @@
+const fs = require('fs');
 const gulp = require("gulp");
-const pug = require("gulp-pug");
 const copy = require("gulp-copy");
+const data = require('gulp-data');
+const pug = require("gulp-pug");
 const sass = require("gulp-sass");
+
+const menu_data_path = "src/data/menu.json";
 
 gulp.task('pug', function(done) {
     gulp.src("src/*.pug")
+        .pipe(data(function(file) {
+             json = JSON.parse(fs.readFileSync(menu_data_path));
+            return { menu_data: json };
+        }))
         .pipe(pug({pretty: true}))
         .pipe(gulp.dest("dst"));
     done();

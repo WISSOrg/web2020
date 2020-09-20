@@ -1,52 +1,14 @@
-- 
-  var menus = [
-    {
-      category: "著者の方へ",
-      pages: [
-        { name: "論文募集", url: "./call-for-papers.html" },
-        { name: "査読方針", url: "./review-policy.html" },
-        { name: "査読フォーム", url: "./review-form.html" },
-      ],
-    },
-    {
-      category: "参加募集",
-      pages: [
-        { name: "表紙デザイン募集", url: "./design-competition.html" },
-        { name: "（準備中）", url: "" },
-      ],
-    },
-    {
-      category: "プログラム",
-      pages: [],
-    },
-    {
-      category: "動画中継",
-      pages: [],
-    },
-    {
-      category: "予稿集",
-      pages: [],
-    },
-    {
-      category: "WISSについて",
-      pages: [
-        { name: "過去のWISS", url: "./archive.html" },
-        { name: "（準備中）", url: "" },
-      ],
-    },
-  ]
-
 footer
   .container
     .row
-      each menu in menus
+      each category in menu_data
         .col-4.col-sm
-          h2 #{menu["category"]}
-          if menu["pages"].length == 0
+          h2 #{category["category_name"]}
+          if category["pages"].length == 0
             p （準備中）
           else
             ul.list-unstyled
-              each page in menu["pages"]
+              each page in category["pages"]
                 if page["url"].length == 0
                   li #{page["name"]}
                 else
