@@ -4,16 +4,17 @@ const copy = require("gulp-copy");
 const data = require('gulp-data');
 const pug = require("gulp-pug");
 const sass = require("gulp-sass");
+const yaml = require("js-yaml")
 
-const menu_data_path = "src/data/menu.json";
+const menu_data_path = "src/data/menu.yml";
 
 gulp.task('pug', function(done) {
     gulp.src("src/*.pug")
         .pipe(data(function(file) {
-             json = JSON.parse(fs.readFileSync(menu_data_path));
-            return { menu_data: json };
+            yaml_data = yaml.load(fs.readFileSync(menu_data_path));
+            return { menu_data: yaml_data };
         }))
-        .pipe(pug({pretty: true}))
+        .pipe(pug({ pretty: true }))
         .pipe(gulp.dest("dst"));
     done();
 });
