@@ -6,25 +6,35 @@
     url: "./review-policy.html"
   - name: 査読フォーム
     url: "./review-form.html"
+  label: for-authors
 - category_name: 参加募集
   pages:
   - name: 表紙デザイン募集
     url: "./design-competition.html"
   - name: "（準備中）"
-    url: ''
+    url: ""
+  label: for-participants
 - category_name: プログラム
-  pages: []
+  pages:
+  - name: "（準備中）"
+    url: ""
+  label: program
 - category_name: 動画中継
-  pages: []
+  pages:
+  - name: "（準備中）"
+    url: ""
+  label: live-streaming
 - category_name: 予稿集
   pages:
   - name: ウェブ予稿集（準備中）
-    url: ''
+    url: ""
   - name: 電子予稿集（準備中）
-    url: ''
+    url: ""
+  label: proceedings
 - category_name: WISSについて
   pages:
   - name: 過去のWISS
     url: "./archive.html"
   - name: "（準備中）"
-    url: ''
+    url: ""
+  label: about-wiss

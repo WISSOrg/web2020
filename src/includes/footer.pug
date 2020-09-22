@@ -4,15 +4,12 @@ footer
       each category in menu_data
         .col-4.col-sm
           h2 #{category["category_name"]}
-          if category["pages"].length == 0
-            p （準備中）
-          else
-            ul.list-unstyled
-              each page in category["pages"]
-                if page["url"].length == 0
-                  li #{page["name"]}
-                else
-                  li <a href="#{page["url"]}">#{page["name"]}</a>
+          ul.list-unstyled
+            each page in category["pages"]
+              if page["url"].length == 0
+                li <a class="disabled">#{page["name"]}</a>
+              else
+                li <a href="#{page["url"]}">#{page["name"]}</a>
     hr
     p.text-center &copy; WISS 2020実行委員会
     p.text-center Contribute to this page on <a href="https://github.com/WISSOrg/web2020">GitHub</a> (PRs welcome).
