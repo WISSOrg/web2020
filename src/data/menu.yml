@@ -9,9 +9,15 @@
   label: for-authors
 - category_name: 参加募集
   pages:
+  - name: 参加募集（準備中）
+    url: ""
   - name: 表紙デザイン募集
     url: "./design-competition.html"
-  - name: "（準備中）"
+  - name: WISS Challenge募集（準備中）
+    url: ""
+  - name: 企業スポンサー募集（準備中）
+    url: ""
+  - name: 学生スタッフ募集（準備中）
     url: ""
   label: for-participants
 - category_name: プログラム
@@ -35,6 +41,10 @@
   pages:
   - name: 過去のWISS
     url: "./archive.html"
-  - name: "（準備中）"
+  - name: 公式ツイッター
+    url: "https://twitter.com/wiss_official"
+  - name: WISS委員一覧（準備中）
+    url: ""
+  - name: 表彰（準備中）
     url: ""
   label: about-wiss
