@@ -41,5 +41,23 @@ html(lang=ja)
     include includes/header
     .container.nav-padding.content
       h1 WISS委員一覧
+      h2 WISS 2020実行委員
+      each chair in chairs
+        .row
+          .col-md-2.col-sm-3.col-4
+            - var image_name = (chair["image"].length == 0) ? "placeholder" : chair["image"];
+            - var image_path = "./assets/committee/" + image_name + ".jpg"
+            img.img-fluid.rounded(src=image_path style="margin-bottom: 10px;")
+          .col
+            h5 #{chair["role"]}
+            ul.list-unstyled
+              li 
+                - var link = (chair["link"].length == 0) ? "" : "（<a href=\"" + chair["link"] + "\">web</a>）"
+                <b>#{chair["name"]}</b>!{link}
+              li
+                <b>所属：</b>#{chair["affiliation"]}
+              li
+                - var keywords = (chair["keywords"].length == 0) ? "" : chair["keywords"].toString().replace(",", "，")
+                <b>専門：</b>#{keywords}
     include includes/footer
     include includes/bootstrap-js
