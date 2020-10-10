@@ -15,5 +15,9 @@
     "type": "git",
     "url": "https://github.com/WISSOrg/web2020.git"
   },
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "csv-parse": "^4.12.0",
+    "sharp": "^0.26.1"
+  }
 }
