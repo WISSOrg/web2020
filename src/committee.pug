@@ -51,13 +51,13 @@ html(lang=ja)
           .col
             h5 #{chair["role"]}
             ul.list-unstyled
-              li 
-                - var link = (chair["link"].length == 0) ? "" : "（<a href=\"" + chair["link"] + "\">web</a>）"
-                <b>#{chair["name"]}</b>!{link}
+              li
+                - var link = (chair["link"].length == 0) ? "" : "<small><a href=\"" + chair["link"] + "\">[web]</a></small>"
+                <b>#{chair["name"]}</b> !{link}
               li
                 <b>所属：</b>#{chair["affiliation"]}
               li
-                - var keywords = (chair["keywords"].length == 0) ? "" : chair["keywords"].toString().replace(",", "，")
+                - var keywords = (chair["keywords"].length == 0) ? "" : chair["keywords"].join("，")
                 <b>専門：</b>#{keywords}
       hr
       .row
@@ -65,5 +65,28 @@ html(lang=ja)
           .col-md-3.col-sm-4.col-6
             h5 #{role}
             p #{members.toString().replace(",", "，")}
+      h2 WISS 2020プログラム委員
+      .row
+        each member in program_committee_data
+          .col-md-2.col-4
+            - var image_name = (member["image"].length == 0) ? "placeholder" : member["image"];
+            - var image_path = "./assets/committee/" + image_name + ".jpg"
+            img.img-fluid.rounded(src=image_path style="margin-bottom: 10px;")
+            h6 
+              | #{member["name"]}
+              |
+              if (member["link"].length != 0) 
+                small: a(href=member["link"]) [web]
+            ul.list-unstyled
+              - var affiliations = []
+              - if (member["affiliation1"].length != 0) { affiliations.push(member["affiliation1"]); }
+              - if (member["affiliation2"].length != 0) { affiliations.push(member["affiliation2"]); }
+              - if (member["affiliation3"].length != 0) { affiliations.push(member["affiliation3"]); }
+              li <b>所属：</b>#{affiliations.join("，")}
+              - var keywords = []
+              - if (member["keyword1"].length != 0) { keywords.push(member["keyword1"]); }
+              - if (member["keyword2"].length != 0) { keywords.push(member["keyword2"]); }
+              - if (member["keyword3"].length != 0) { keywords.push(member["keyword3"]); }
+              li <b>専門：</b>#{keywords.join("，")}
     include includes/footer
     include includes/bootstrap-js
