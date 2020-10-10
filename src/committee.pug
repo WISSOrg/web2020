@@ -44,7 +44,7 @@ html(lang=ja)
       h2 WISS 2020実行委員
       each chair in chairs
         .row
-          .col-md-2.col-sm-3.col-4
+          .col-md-2.col-4
             - var image_name = (chair["image"].length == 0) ? "placeholder" : chair["image"];
             - var image_path = "./assets/committee/" + image_name + ".jpg"
             img.img-fluid.rounded(src=image_path style="margin-bottom: 10px;")
