@@ -43,8 +43,8 @@
     url: "./archive.html"
   - name: 公式ツイッター
     url: "https://twitter.com/wiss_official"
-  - name: WISS委員一覧（準備中）
-    url: ""
+  - name: WISS委員一覧
+    url: "./committee.html"
   - name: 表彰（準備中）
     url: ""
   label: about-wiss
