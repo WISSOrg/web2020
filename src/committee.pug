@@ -59,5 +59,11 @@ html(lang=ja)
               li
                 - var keywords = (chair["keywords"].length == 0) ? "" : chair["keywords"].toString().replace(",", "，")
                 <b>専門：</b>#{keywords}
+      hr
+      .row
+        each members, role in yaml_organizing_committee_data
+          .col-md-3.col-sm-4.col-6
+            h5 #{role}
+            p #{members.toString().replace(",", "，")}
     include includes/footer
     include includes/bootstrap-js
