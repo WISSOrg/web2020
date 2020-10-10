@@ -6,10 +6,32 @@ const pug = require("gulp-pug");
 const sass = require("gulp-sass");
 const yaml = require("js-yaml")
 const csvParse = require('csv-parse/lib/sync');
+const sharp = require("sharp");
+const glob = require("glob");
 
 const menu_data_path = "src/data/menu.yml";
 const organizing_committee_data_path = "src/data/organizing-committee.yml"
 const program_committee_data_path = "src/data/program-committee.csv"
+
+gulp.task('asset-processing', function(done) {
+    fs.mkdirSync("dst/assets/committee", { recursive: true });
+    var files = glob.sync("src/assets/committee/*.*");
+    files.forEach(function(file) {
+        var name = file.substring(file.lastIndexOf('/') + 1).replace(".jpg", "").replace(".png", "");
+        sharp(file)
+            .resize({ width: 480, height: 480, fit: "cover" })
+            .jpeg({ quality: 80 })
+            .toFile("dst/assets/committee/" + name + ".jpg");
+    });
+
+    gulp.src("src/assets/originals/**/*")
+        .pipe(gulp.dest("dst/assets/thumbnails"));
+
+    gulp.src("src/assets/originals/**/*")
+        .pipe(gulp.dest("dst/assets/originals"));
+
+    done();
+});
 
 gulp.task('pug', function(done) {
     gulp.src("src/*.pug")
@@ -42,11 +64,7 @@ gulp.task('sass', function(done) {
 gulp.task('copy', function(done) {
     gulp.src("src/downloads/**/*")
         .pipe(gulp.dest("dst/downloads"));
-    gulp.src("src/assets/**/*")
-        .pipe(gulp.dest("dst/assets"));
-    gulp.src("src/assets/originals/**/*")
-        .pipe(gulp.dest("dst/assets/thumbnails"));
     done();
 });
 
-gulp.task('default', gulp.parallel('pug', 'sass', 'copy'));
+gulp.task('default', gulp.parallel('asset-processing', 'pug', 'sass', 'copy'));
