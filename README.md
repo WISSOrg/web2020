@@ -44,6 +44,6 @@ All rights reserved by WISS.
 
 ## Contributing
 
-Issues and Pull Requests are highly appreciated, but please 
-- (1) understand that the rights on your contribution will belong to WISS, and 
+Issues and Pull Requests are highly appreciated, but please
+- (1) understand that the rights on your contribution will belong to WISS, and
 - (2) confirm that you do not violate any third parties' rights.
