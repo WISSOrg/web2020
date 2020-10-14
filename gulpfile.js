@@ -41,15 +41,15 @@ gulp.task('asset-processing', function(done) {
 });
 
 gulp.task('pug', function(done) {
+    // Read YAML files
+    const menu_data = yaml.load(fs.readFileSync(menu_data_path));
+    const organizing_committee_data = yaml.load(fs.readFileSync(organizing_committee_data_path));
+
+    // Read CSV files
+    const program_committee_data = csvParse(fs.readFileSync(program_committee_data_path), {columns: true});
+
     gulp.src("src/*.pug")
         .pipe(data(function(file) {
-            // Read YAML files
-            const menu_data = yaml.load(fs.readFileSync(menu_data_path));
-            const organizing_committee_data = yaml.load(fs.readFileSync(organizing_committee_data_path));
-
-            // Read CSV files
-            const program_committee_data = csvParse(fs.readFileSync(program_committee_data_path), {columns: true});
-
             return {
                 menu_data: menu_data,
                 organizing_committee_data: organizing_committee_data,
