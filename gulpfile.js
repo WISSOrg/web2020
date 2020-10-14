@@ -9,24 +9,31 @@ const csvParse = require('csv-parse/lib/sync');
 const sharp = require("sharp");
 const glob = require("glob");
 
+// Define paths to the data
 const menu_data_path = "src/data/menu.yml";
 const organizing_committee_data_path = "src/data/organizing-committee.yml"
 const program_committee_data_path = "src/data/program-committee.csv"
 
 gulp.task('asset-processing', function(done) {
+    // Compress committee member portraits and copy them to the destination directory
+    const files = glob.sync("src/assets/committee/*.*");
+    const size = 480;
+    const quality = 80;
     fs.mkdirSync("dst/assets/committee", { recursive: true });
-    var files = glob.sync("src/assets/committee/*.*");
     files.forEach(function(file) {
-        var name = file.substring(file.lastIndexOf('/') + 1).replace(".jpg", "").replace(".png", "");
+        const name = file.substring(file.lastIndexOf('/') + 1).replace(".jpg", "").replace(".png", "");
         sharp(file)
-            .resize({ width: 480, height: 480, fit: "cover" })
-            .jpeg({ quality: 80 })
+            .resize({ width: size, height: size, fit: "cover" })
+            .jpeg({ quality: quality })
             .toFile("dst/assets/committee/" + name + ".jpg");
     });
 
+    // Copy the previous cover images as thumbnails
+    // TODO: Compress these images
     gulp.src("src/assets/originals/**/*")
         .pipe(gulp.dest("dst/assets/thumbnails"));
 
+    // Copy the previous cover images
     gulp.src("src/assets/originals/**/*")
         .pipe(gulp.dest("dst/assets/originals"));
 
