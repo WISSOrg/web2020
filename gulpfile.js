@@ -44,16 +44,16 @@ gulp.task('pug', function(done) {
     gulp.src("src/*.pug")
         .pipe(data(function(file) {
             // Read YAML files
-            yaml_menu_data = yaml.load(fs.readFileSync(menu_data_path));
-            yaml_organizing_committee_data = yaml.load(fs.readFileSync(organizing_committee_data_path));
+            const menu_data = yaml.load(fs.readFileSync(menu_data_path));
+            const organizing_committee_data = yaml.load(fs.readFileSync(organizing_committee_data_path));
 
             // Read CSV files
-            csv_program_committee_data = csvParse(fs.readFileSync(program_committee_data_path), {columns: true});
+            const program_committee_data = csvParse(fs.readFileSync(program_committee_data_path), {columns: true});
 
             return {
-                menu_data: yaml_menu_data,
-                organizing_committee_data: yaml_organizing_committee_data,
-                program_committee_data: csv_program_committee_data
+                menu_data: menu_data,
+                organizing_committee_data: organizing_committee_data,
+                program_committee_data: program_committee_data
             };
         }))
         .pipe(pug({ pretty: true }))
