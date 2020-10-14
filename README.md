@@ -38,6 +38,20 @@ npm run build
 
 The changes pushed to the master branch will be automatically deployed to GitHub Pages via GitHub Action.
 
+## Source Structure
+
+- `src/*.pug`: Pug files that will be compiled as HTMLs.
+- `src/includes/*.pug`: Pug files that will be included by other pug files.
+- `src/md/*.md`: Markdown files that will be included in corresponding pug files.
+- `src/sass/*.sass`: Sass files that will be compiled as CSSs.
+- `src/data/**/*`: Meta data files that will be referred during compilation.
+- `src/downloads/**/*`: Asset files that will be copied as they are.
+- `src/assets/**/*`: Asset files that will be properly processed (e.g., for compression) during compilation and will be referred by HTMLs.
+
+## CSS
+
+For simplicity, this website uses the vanilla Bootstrap 4 framework distributed via CDN with a custom CSS that overwrites some attributes.
+
 ## License
 
 All rights reserved by WISS.
