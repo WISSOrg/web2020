@@ -26,6 +26,7 @@ html(lang=ja)
     .container.content
       if headlines.length != 0
         .alert.alert-primary 
+          p(style="margin-bottom: 0px;") 最近の主な更新内容：
           ul(style="margin: 0px;")
             each headline in headlines
               li !{headline}
