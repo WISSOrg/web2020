@@ -1,5 +1,5 @@
 - var page_title = "WISS 2020: 第28回インタラクティブシステムとソフトウェアに関するワークショップ"
-- var logo_large = "./assets/logo/logo.png"
+- var logo_path = "./assets/logo/logo.png"
 - var logo_size = 260
 -
   var headlines = [
@@ -23,7 +23,7 @@ html(lang=ja)
     .jumbotron
       .container.text-center
         img(src="./assets/textures/texture.jpg" style="object-fit: cover; object-position: 50% 50%; width: 100%; height: 100%; mix-blend-mode: overlay; position: absolute; top: 0%; left: 0%; opacity: 20%; pointer-events: none; z-index: 2;")
-        img.img-fluid(src=logo_large style="max-height: " + logo_size + "px;")
+        img.img-fluid(src=logo_path style="max-height: " + logo_size + "px;")
         hr
         p.lead WISS 2020: 第28回インタラクティブシステムとソフトウェアに関するワークショップ
     .container.content
