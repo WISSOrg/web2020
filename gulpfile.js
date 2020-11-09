@@ -40,8 +40,10 @@ gulp.task('asset-processing', function(done) {
     gulp.src("src/assets/logo/**/*.png")
         .pipe(gulp.dest("dst/assets/logo"));
 
-    gulp.src("src/assets/textures/**/*")
-        .pipe(gulp.dest("dst/assets/textures"));
+    sharp("src/assets/textures/texture.jpg")
+        .resize({ width: 2400 })
+        .jpeg({ quality: 60 })
+        .toFile("dst/assets/textures/texture.jpg")
 
     done();
 });
