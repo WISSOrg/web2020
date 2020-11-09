@@ -1,5 +1,13 @@
-$color-dark: rgb(40, 40, 48)
-$color-light: rgb(240, 240, 250)
+$color-1: rgb(174, 61, 100)
+$color-2: rgb(26, 22, 46)
+$color-3: rgb(167, 169, 172)
+$color-4: rgb(54, 51, 52)
+$color-5: rgb(0, 140, 161)
+
+$color-dark: $color-2
+$color-light: change-color($color-3, $lightness: 95%)
+$color-jumbo-bg: mix($color-2, $color-5, 50%)
+$primary-bg: change-color($color-jumbo-bg, $lightness: 85%, $saturation: 45%)
 
 @font-face
     font-family: 'Noto Sans Japanese'
@@ -35,6 +43,9 @@ a:hover
 h1, h2, h3, h4, h5, h6
     font-weight: bold
 
+.alert-primary
+    background-color: $primary-bg
+
 .content > h1
     font-size: 2.3em
     margin-bottom: 32px
@@ -56,10 +67,11 @@ body
 .jumbotron
     overflow: hidden
     position: relative
-    background-color: rgba(0, 0, 0, 0.1)
+    background-color: $color-jumbo-bg
     padding-top: 110px + 56px
     padding-bottom: 110px
     border-radius: 0rem
+    color: $color-3
 
 .nav-padding
     padding-top: 56px + 64px
