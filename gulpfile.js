@@ -37,6 +37,12 @@ gulp.task('asset-processing', function(done) {
     gulp.src("src/assets/originals/**/*")
         .pipe(gulp.dest("dst/assets/originals"));
 
+    gulp.src("src/assets/logo/**/*.png")
+        .pipe(gulp.dest("dst/assets/logo"));
+
+    gulp.src("src/assets/textures/**/*")
+        .pipe(gulp.dest("dst/assets/textures"));
+
     done();
 });
 
