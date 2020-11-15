@@ -40,10 +40,11 @@ gulp.task('asset-processing', function(done) {
     gulp.src("src/assets/logo/**/*.png")
         .pipe(gulp.dest("dst/assets/logo"));
 
+    fs.mkdirSync("dst/assets/textures", {recursive: true });
     sharp("src/assets/textures/texture.jpg")
         .resize({ width: 2400 })
         .jpeg({ quality: 60 })
-        .toFile("dst/assets/textures/texture.jpg")
+        .toFile("dst/assets/textures/texture.jpg");
 
     done();
 });
