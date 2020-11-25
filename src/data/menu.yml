@@ -9,8 +9,8 @@
   label: for-authors
 - category_name: 参加募集
   pages:
-  - name: 参加募集（準備中）
-    url: ""
+  - name: 参加募集
+    url: "./call-for-participants.html"
   - name: 表紙デザイン募集
     url: "./design-competition.html"
   - name: WISS Challenge募集
