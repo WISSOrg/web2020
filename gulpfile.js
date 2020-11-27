@@ -28,6 +28,17 @@ gulp.task('asset-processing', function(done) {
             .toFile("dst/assets/committee/" + name + ".jpg");
     });
 
+    // Compress sponsor logos and copy them to the destination directory
+    const sponsor_logo_files = glob.sync("src/assets/sponsors/*.*");
+    fs.mkdirSync("dst/assets/sponsors", {recursive: true });
+    sponsor_logo_files.forEach(function(file) {
+        const name = file.substring(file.lastIndexOf('/') + 1).replace(".jpg", "").replace(".png", "");
+        sharp(file)
+            .resize({ width: size, height: size, fit: "inside" })
+            .png()
+            .toFile("dst/assets/sponsors/" + name + ".png");
+    });
+
     // Copy the previous cover images as thumbnails
     // TODO: Compress these images
     gulp.src("src/assets/originals/**/*")
