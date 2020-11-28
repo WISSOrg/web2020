@@ -13,8 +13,17 @@ html(lang=ja)
     include includes/header
     .container.nav-padding.content
       h1 全体スケジュール
-      p TODO
+      table.table.table-hover
+        each schedule in schedule_data
+          thead
+            tr
+              th(scope="col" colspan="2") #{schedule["name"]}
+          tbody
+            each entry in schedule["content"]
+              tr
+                td #{entry["time"]}
+                td #{entry["title"]}
       h1 登壇発表・査読なし発表
-      p TODO
+      p （準備中）
     include includes/footer
     include includes/bootstrap-js
