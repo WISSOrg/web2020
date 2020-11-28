@@ -2,17 +2,23 @@
   content:
     - time: "09:00"
       title: "オープニング"
+      session-id: session-n
     - time: "10:00"
       title: "セッションN: インタラクション"
+      session-id: session-n
 - name: "2日目 (12/17)"
   content:
     - time: "09:00"
       title: "オープニング"
+      session-id: session-n
     - time: "10:00"
       title: "セッションN: インタラクション"
+      session-id: session-n
 - name: "3日目 (12/18)"
   content:
     - time: "09:00"
       title: "オープニング"
+      session-id: session-n
     - time: "10:00"
       title: "セッションN: インタラクション"
+      session-id: session-n
