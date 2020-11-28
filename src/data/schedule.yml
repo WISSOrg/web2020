@@ -1,18 +1,18 @@
 - name: "1日目 (12/16)"
   content:
-    - time: 09:00
+    - time: "09:00"
       title: "オープニング"
-    - time: 10:00
+    - time: "10:00"
       title: "セッションN: インタラクション"
 - name: "2日目 (12/17)"
   content:
-    - time: 09:00
+    - time: "09:00"
       title: "オープニング"
-    - time: 10:00
+    - time: "10:00"
       title: "セッションN: インタラクション"
 - name: "3日目 (12/18)"
   content:
-    - time: 09:00
+    - time: "09:00"
       title: "オープニング"
-    - time: 10:00
+    - time: "10:00"
       title: "セッションN: インタラクション"
