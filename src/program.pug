@@ -13,9 +13,9 @@ html(lang=ja)
     include includes/header
     .container.nav-padding.content
       h1 全体スケジュール
-      table.table.table-hover
+      table.table.table-hover(style="margin-bottom: 48px;")
         each schedule in schedule_data
-          thead
+          thead.thead-light
             tr
               th(scope="col" colspan="2") #{schedule["name"]}
           tbody
