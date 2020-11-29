@@ -31,10 +31,7 @@ WISS2020では，予稿集はウェブのみでの公開となります．LaTeX�
 
 - 6ページ以内の論文（日本語あるいは英語）をPDFで提出してください．
 - 投稿原稿には著者名や所属を明記ください（シングルブラインド査読）．著者らの関連論文を Reference から削除する必要はありません．
-- 論文テンプレートは既定のものを利用してください:
-  - [論文テンプレート（Word）](./downloads/WISS_Template_2020_0825_word.docx)
-  - [論文テンプレート（Overleaf）](https://www.overleaf.com/latex/templates/wiss2020-template/ytdfgqwtwgcs)
-  - [論文テンプレート（LaTeX2e）](./downloads/WISS_Template_2020_0825_latex.zip)
+- 登壇発表用の論文テンプレートを利用してください．
 - 査読方針および査読フォームも以下を参照してください:
   - [査読方針](./review-policy.html)
   - [査読フォーム](./review-form.html)
@@ -66,7 +63,7 @@ WISSでは伝統的に，「アイディアの斬新さ」及び「デモや実�
 ## 査読なし発表
 
 - 6ページ以内の論文（日本語あるいは英語）をPDFで提出してください．ただし，原稿無しの発表も認めます（0ページ）．その際は，システムへタイトルと著者情報のみ入力してください．
-- 基本的な記述制約やテンプレートは登壇発表と同様です．
+- 査読なし発表用の論文テンプレートを利用してください．
 - 特別な場合を除き，投稿された原稿がそのままWEBに掲載されますので，誤字脱字や不明瞭な表現が無いよう十分にチェックの上投稿ください（共著者によるチェックも投稿前に受けてください）．
 - 査読なし発表は原則査読はありませんが，枠が限られているため，応募件数によっては早期に締切る可能性があります．
 - 1ページ以上の論文はウェブ上に掲載されますが，その原稿はNon-archivalなものとして査読あり登壇発表とは明確に区別します．
@@ -99,10 +96,10 @@ WISSでは伝統的に，「アイディアの斬新さ」及び「デモや実�
 
 ダウンロード時のブラウザはGoogle Chromeを推奨しています．（他ブラウザの場合文字化け等の不具合が生じる可能性があります．）
 
-- [WISS2020 MS Word 投稿用スタイルファイル](./downloads/WISS_Template_2020_0825_word.docx) (著者名及び所属を入れてください．)
-- [論文テンプレート（Overleaf）](https://www.overleaf.com/latex/templates/wiss2020-template/ytdfgqwtwgcs)
-- [論文テンプレート（LaTeX2e）](./downloads/WISS_Template_2020_0825_latex.zip)(著者名及び所属を入れてください．Macご利用の方で，コンパイルに失敗する場合はソースコードをutf8に変更して試してみてください)
-- [WISS2020 論文よくあるミス一覧](./downloads/WISS_Template_2020_0825_errors.pdf)
+- WISS2020 MS Word 投稿用スタイルファイル [登壇発表用](/download/WISS_Template_2020_0825_word.docx)／[査読なし用](/download/WISS_Template_2020_1129_word.docx) (著者名及び所属を入れてください．)
+- 論文テンプレート（LaTeX2e）[登壇発表用](/download/WISS_Template_2020_0825_latex.zip)／[査読なし発表用](/download/WISS_Template_2020_1129_latex.zip) (著者名及び所属を入れてください．Macご利用の方で，コンパイルに失敗する場合はソースコードをutf8に変更して試してみてください)
+- [論文テンプレート（Overleaf）登壇発表用](https://www.overleaf.com/latex/templates/wiss2020-template/ytdfgqwtwgcs)
+- [WISS2020 論文よくあるミス一覧](/download/WISSTemplate_2020_0825_errors.pdf)
 
 論文テンプレートに関する注意
 - 原稿フォーマットは下記の論文テンプレート（LaTeX2eのスタイルファイル，またはWordファイル）をご利用ください．PDFのファイルサイズは20Mバイト以下とします．
