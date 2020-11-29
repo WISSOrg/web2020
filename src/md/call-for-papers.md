@@ -96,10 +96,10 @@ WISSでは伝統的に，「アイディアの斬新さ」及び「デモや実�
 
 ダウンロード時のブラウザはGoogle Chromeを推奨しています．（他ブラウザの場合文字化け等の不具合が生じる可能性があります．）
 
-- WISS2020 MS Word 投稿用スタイルファイル [登壇発表用](/download/WISS_Template_2020_0825_word.docx)／[査読なし用](/download/WISS_Template_2020_1129_word.docx) (著者名及び所属を入れてください．)
-- 論文テンプレート（LaTeX2e）[登壇発表用](/download/WISS_Template_2020_0825_latex.zip)／[査読なし発表用](/download/WISS_Template_2020_1129_latex.zip) (著者名及び所属を入れてください．Macご利用の方で，コンパイルに失敗する場合はソースコードをutf8に変更して試してみてください)
+- WISS2020 MS Word 投稿用スタイルファイル [登壇発表用](./downloads/WISS_Template_2020_0825_word.docx)／[査読なし用](./downloads/WISS_Template_2020_1129_word.docx) (著者名及び所属を入れてください．)
+- 論文テンプレート（LaTeX2e）[登壇発表用](./downloads/WISS_Template_2020_0825_latex.zip)／[査読なし発表用](./downloads/WISS_Template_2020_1129_latex.zip) (著者名及び所属を入れてください．Macご利用の方で，コンパイルに失敗する場合はソースコードをutf8に変更して試してみてください)
 - [論文テンプレート（Overleaf）登壇発表用](https://www.overleaf.com/latex/templates/wiss2020-template/ytdfgqwtwgcs)
-- [WISS2020 論文よくあるミス一覧](/download/WISSTemplate_2020_0825_errors.pdf)
+- [WISS2020 論文よくあるミス一覧](./downloads/WISSTemplate_2020_0825_errors.pdf)
 
 論文テンプレートに関する注意
 - 原稿フォーマットは下記の論文テンプレート（LaTeX2eのスタイルファイル，またはWordファイル）をご利用ください．PDFのファイルサイズは20Mバイト以下とします．
