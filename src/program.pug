@@ -13,16 +13,18 @@ html(lang=ja)
     include includes/header
     .container.nav-padding.content
       h1 全体スケジュール
-      table.table.table-hover(style="margin-bottom: 48px;")
+      .row
         each schedule in schedule_data
-          thead.thead-light
-            tr
-              th(scope="col" colspan="2") #{schedule["name"]}
-          tbody
-            each entry in schedule["content"]
-              tr
-                td #{entry["time"]}
-                td #{entry["title"]}
+          .col-lg-4
+            table.table.table-hover(style="margin-bottom: 48px;")
+              thead.thead-light
+                tr
+                  th(scope="col" colspan="2") #{schedule["name"]}
+              tbody
+                each entry in schedule["content"]
+                  tr
+                    td #{entry["time"]}
+                    td #{entry["title"]} <small>[#{entry["duration"]}分]</small>
       h1 登壇発表・査読なし発表
       .program
         hr
