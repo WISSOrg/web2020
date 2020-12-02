@@ -3,6 +3,7 @@
 - var logo_size = 260
 -
   var headlines = [
+    '2020/12/02: <a href="./program.html">全体スケジュール</a>および登壇発表のタイトルを掲載しました。',
     '2020/11/25: <a href="./call-for-participants.html">参加募集</a>を開始しました。',
     '2020/11/10: WISS 2020のロゴを掲載しました。',
     '2020/10/16: <a href="./challenge.html">WISS Challenge募集ページ</a>を掲載しました。',
@@ -22,7 +23,7 @@ html(lang=ja)
     link(rel="stylesheet" href="./css/override.css")
   body
     include includes/header
-    .jumbotron
+    .jumbotron#top
       .container.text-center
         img(src="./assets/textures/texture.jpg" style="object-fit: cover; object-position: 50% 50%; width: 100%; height: 100%; mix-blend-mode: overlay; position: absolute; top: 0%; left: 0%; opacity: 20%; pointer-events: none; z-index: 2;")
         img.img-fluid(src=logo_path style="max-height: " + logo_size + "px;")

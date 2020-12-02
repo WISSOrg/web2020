@@ -11,6 +11,7 @@ const glob = require("glob");
 
 // Define paths to the data
 const menu_data_path = "src/data/menu.yml";
+const schedule_data_path = "src/data/schedule.yml"
 const organizing_committee_data_path = "src/data/organizing-committee.yml"
 const program_committee_data_path = "src/data/program-committee.csv"
 
@@ -64,6 +65,7 @@ gulp.task('pug', function(done) {
     // Read YAML files
     const menu_data = yaml.load(fs.readFileSync(menu_data_path));
     const organizing_committee_data = yaml.load(fs.readFileSync(organizing_committee_data_path));
+    const schedule_data = yaml.load(fs.readFileSync(schedule_data_path));
 
     // Read CSV files
     const program_committee_data = csvParse(fs.readFileSync(program_committee_data_path), {columns: true});
@@ -73,6 +75,7 @@ gulp.task('pug', function(done) {
             return {
                 menu_data: menu_data,
                 organizing_committee_data: organizing_committee_data,
+                schedule_data: schedule_data,
                 program_committee_data: program_committee_data
             };
         }))

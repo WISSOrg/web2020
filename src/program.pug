@@ -1,0 +1,95 @@
+- var page_title = "WISS 2020: 第28回インタラクティブシステムとソフトウェアに関するワークショップ"
+
+- 
+  var temp_data = [
+    { session: "セッション1: 行動支援", talks: [
+    "[L] LineChaser: 視覚障碍者が列に並ぶためのスマートフォン型支援システム",
+    "[S] One-Shot Wayfinding System: 360度スマートフォンカメラと矢印分析を用いた視覚障碍者のための公共施設における方向決定支援システム",
+    "[S] ストレッチセンサを用いた常時膝角度推定によるサポータ型怪我防止システム",
+    ], },
+    { session: "セッション2: ディスプレイ", talks: [
+    "[L] 電解イオンディスプレイ",
+    "[S] カスタマイズ可能な二次元レンチキュラを用いた多視点情報提示手法の提案",
+    "[S] 電気分解気泡による流水ティッカー表示と高画素階調表示",
+    ], },
+    { session: "セッション3: ものづくり", talks: [
+    "[L] パーツの集合体を利用した半幅帯のための帯結び形状デザインツールの提案",
+    "[L] Pop-up Print: 双安定な折りたたみ3Dプリント",
+    "[S] 手芸初心者を対象とした猫用ケープの制作支援システム",
+    ], },
+    { session: "セッション4: 認識", talks: [
+    "[L] アクティブ音響センシングを用いた食材認識カトラリー",
+    "[S] （タイトル未公開）",
+    "[S] PartsSweeper: 電子部品や工具をさりげなく整理するインタラクティブ・デスクの試作と応用",
+    ], },
+    { session: "セッション5: 入力インタフェース", talks: [
+    "[L] FieldSweep: 永久磁石の配列とスマートフォン磁気センサを用いた二次元トラッキング手法",
+    "[S] ORANGE: 360度カメラと画像認識技術によるユニバーサルリモコン",
+    "[S] （タイトル未公開）",
+    "[S] ベイズ情報利得を用いたスクリーンキーボードカーソルの効率的移動手法",
+    "[S] JoyFlick: フリック入力に基づくゲームパッド向けかな文字入力手法",
+    ], },
+    { session: "セッション6: 情報提示", talks: [
+    "[L] 画面に映っている食品の味を再現して味わえる味ディスプレイの開発",
+    "[S] 散布図選択による多次元データ可視化へのグラフ彩色問題の適用",
+    "[S] 1対多遠隔コミュニケーションにおける聴衆反応の集合的提示",
+    ], },
+    { session: "セッション7: 教育支援", talks: [
+    "[L] askTA : 消極的な受講生でも質問可能なオンライン演習講義支援システム",
+    "[S] 視覚・聴覚フィードバックによるフィールドホッケーのプッシュ練習支援システムの提案と実装",
+    "[S] SectionsNote: セクションを考慮してレイアウトおよび閲覧できるデジタルノート",
+    ], },
+    ]
+
+
+doctype html
+html(lang=ja)
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    include includes/seo
+    title #{page_title}
+    include includes/bootstrap-css
+    link(rel="stylesheet" href="./css/override.css")
+  body
+    include includes/header
+    .container.nav-padding.content
+      h1 全体スケジュール
+      .row
+        each schedule in schedule_data
+          .col-lg-4
+            table.table.table-hover(style="margin-bottom: 48px;")
+              thead.thead-light
+                tr
+                  th(scope="col" colspan="2") #{schedule["name"]}
+              tbody
+                each entry in schedule["content"]
+                  tr
+                    td #{entry["time"]}
+                    td #{entry["title"]} <small>[#{entry["duration"]}分]</small>
+      h1 登壇発表・査読なし発表
+      .alert.alert-primary(role="alert") 2020/12/02: 現時点では登壇発表のタイトルのみ掲載しています。査読なし発表及び登壇発表の詳細情報は近日中に掲載予定です。
+      .program
+        each session in temp_data
+          hr
+          .jumbotron
+            h1 #{session["session"]}
+            ul.list-inline
+              //- li.list-inline-item <b>日時：</b>XX/XX XX:XX&mdash;XX:XX
+              li.list-inline-item <b>座長：</b>（未定）
+              li.list-inline-item <b>チャット座長：</b>（未定）
+          each talk in session["talks"]
+            h2 #{talk}
+        //- h2 [1] DanceUnisoner: グループダンスパフォーマンス動画作成インタフェース <span class="badge badge-short">ショート発表</span>
+        //- p.authors 土田 修平，深山 覚，後藤 真孝（産総研）
+        //- .row
+        //-   .col-md-4
+        //-     img.img-fluid.representative(src="./assets/logo/logo.png")
+        //-   .col-md-4
+        //-     h3 要旨：
+        //-     p 複数人でのダンスのイメージを振付師1人でも検討・確認・共有できるグループダンスパフォーマンス動画作成インタフェース DanceUnisoner を開発した．DanceUnisoner では，ダンサー1人が踊っているダンス動画をコピー&ペーストの要領で三次元空間に配置していくことで，グループダンスの動画を手軽に作成できる．グループダンスの人数や配置，向き，大きさ，時間ずれを一括で容易に変更できるシンプルなGUIを備える．
+        //-   .col-md-4
+        //-     h3 採録時コメント：
+        //-     p 集団でのダンスを対象とした振り付け支援システムという、多くの人々にとっては馴染みのない題材ではあるが、現場レベルの様々な要求を満たすべく細かいところまでデザインされており、興味深い。著者らの方法論を他分野へどのように波及させられるかの議論を期待したい。
+    include includes/footer
+    include includes/bootstrap-js
