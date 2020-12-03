@@ -35,7 +35,7 @@ gulp.task('asset-processing', function(done) {
     sponsor_logo_files.forEach(function(file) {
         const name = file.substring(file.lastIndexOf('/') + 1).replace(".jpg", "").replace(".png", "");
         sharp(file)
-            .resize({ width: size, height: size, fit: "inside" })
+            .resize({ width: 400, height: 200, fit: "contain", background: {r: 0, g: 0, b: 0, alpha: 0.0}})
             .png()
             .toFile("dst/assets/sponsors/" + name + ".png");
     });
