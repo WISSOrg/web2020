@@ -69,6 +69,10 @@ html(lang=ja)
                     td #{entry["title"]} <small>[#{entry["duration"]}分]</small>
       h1 登壇発表・査読なし発表
       .alert.alert-primary(role="alert") 2020/12/02: 現時点では登壇発表のタイトルのみ掲載しています。査読なし発表及び登壇発表の詳細情報は近日中に掲載予定です。
+      ul
+        li 登壇発表（ロング発表）：<b>25分</b> <small>[質疑込み]</small>
+        li 登壇発表（ショート発表）：<b>15分</b> <small>[質疑込み]</small>
+        li 査読なし発表：<b>5分</b> <small>[質疑なし]</small>
       .program
         each session in temp_data
           hr
