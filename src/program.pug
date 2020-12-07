@@ -117,10 +117,10 @@ html(lang=ja)
                     img.img-fluid.img-thumbnail.representative(src=image_path)
                   .col-md-4
                     h3 要旨：
-                    p #{papers_author_provided_data[parseInt(talk) - 1]["abstract"]}
+                    p #{csv_data_entry["abstract"]}
                   .col-md-4
                     h3 採録時コメント：
-                    p （準備中）
+                    p #{csv_data_entry["comment"]}
         each session in non_archival_sessions
           hr
           .jumbotron
