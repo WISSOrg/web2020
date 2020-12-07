@@ -105,11 +105,13 @@ html(lang=ja)
               li.list-inline-item <b>チャット座長：</b>（未定）
           each talk in session["talks"]
             each entry in papers_data
+              - const csv_data_entry = papers_author_provided_data[parseInt(talk) - 1];
+              - const image_path = csv_data_entry["image"] == "TRUE" ? "./assets/representatives/" + talk + ".jpg" : placeholder_image_path;
+              - const category_class = csv_data_entry["category"] == "L" ? "badge-long" : "badge-short";
+              - const category_name = csv_data_entry["category"] == "L" ? "ロング発表" : "ショート発表";
               if entry["id"] == talk
-                h2 [#{talk}] #{entry["title"]}
+                h2 [#{talk}] #{entry["title"]} <span class="badge #{category_class}">#{category_name}</span>
                 p.authors #{entry["authors"]}
-                - const csv_data_entry = papers_author_provided_data[parseInt(talk) - 1];
-                - const image_path = csv_data_entry["image"] == "TRUE" ? "./assets/representatives/" + talk + ".jpg" : placeholder_image_path;
                 .row
                   .col-md-4
                     img.img-fluid.img-thumbnail.representative(src=image_path)
