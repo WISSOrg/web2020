@@ -89,7 +89,6 @@ html(lang=ja)
                     td #{entry["time"]}
                     td #{entry["title"]} <small>[#{entry["duration"]}分]</small>
       h1 登壇発表・査読なし発表
-      .alert.alert-primary(role="alert") 2020/12/02: 現時点では登壇発表のタイトルのみ掲載しています。査読なし発表及び登壇発表の詳細情報は近日中に掲載予定です。
       ul
         li 登壇発表（ロング発表）：<b>25分</b> <small>[発表15分・質疑10分]</small>
         li 登壇発表（ショート発表）：<b>15分</b> <small>[発表10分・質疑5分]</small>
@@ -134,5 +133,8 @@ html(lang=ja)
               if entry["id"] == talk
                 h2 [#{talk}] #{entry["title"]}
                 p.authors #{entry["authors"]}
+        hr
+        p 
+          small 著者の方へ：ウェブプログラム掲載用のデータを提出・差替を希望する場合は2020web@wiss.orgまたはGitHubレポジトリのIssuesへ連絡をお願いします。
     include includes/footer
     include includes/bootstrap-js
