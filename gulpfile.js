@@ -31,13 +31,25 @@ gulp.task('asset-processing', function(done) {
             .toFile("dst/assets/committee/" + name + ".jpg");
     });
 
+    // Compress representative images and copy them to the destination directory
+    const representative_files = glob.sync("src/assets/representatives/*.*");
+    fs.mkdirSync("dst/assets/representatives", {recursive: true });
+    representative_files.forEach(function(file) {
+        const name = file.substring(file.lastIndexOf('/') + 1).replace(".jpg", "").replace(".png", "");
+        sharp(file)
+            .flatten({ background: { r: 255, g: 255, b: 255 }})
+            .resize({ width: 600, height: 450, fit: "cover" })
+            .jpeg({ quality: quality })
+            .toFile("dst/assets/representatives/" + name + ".jpg");
+    });
+
     // Compress sponsor logos and copy them to the destination directory
     const sponsor_logo_files = glob.sync("src/assets/sponsors/*.*");
     fs.mkdirSync("dst/assets/sponsors", {recursive: true });
     sponsor_logo_files.forEach(function(file) {
         const name = file.substring(file.lastIndexOf('/') + 1).replace(".jpg", "").replace(".png", "");
         sharp(file)
-            .resize({ width: 400, height: 200, fit: "contain", background: {r: 0, g: 0, b: 0, alpha: 0.0}})
+            .resize({ width: 400, height: 200, fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0.0 } })
             .png()
             .toFile("dst/assets/sponsors/" + name + ".png");
     });
