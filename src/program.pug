@@ -1,45 +1,21 @@
 - var page_title = "WISS 2020: 第28回インタラクティブシステムとソフトウェアに関するワークショップ"
 
 - 
-  var temp_data = [
-    { session: "セッション1: 行動支援", talks: [
-    "[L] LineChaser: 視覚障碍者が列に並ぶためのスマートフォン型支援システム",
-    "[S] One-Shot Wayfinding System: 360度スマートフォンカメラと矢印分析を用いた視覚障碍者のための公共施設における方向決定支援システム",
-    "[S] ストレッチセンサを用いた常時膝角度推定によるサポータ型怪我防止システム",
-    ], },
-    { session: "セッション2: ディスプレイ", talks: [
-    "[L] 電解イオンディスプレイ",
-    "[S] カスタマイズ可能な二次元レンチキュラを用いた多視点情報提示手法の提案",
-    "[S] 電気分解気泡による流水ティッカー表示と高画素階調表示",
-    ], },
-    { session: "セッション3: ものづくり", talks: [
-    "[L] パーツの集合体を利用した半幅帯のための帯結び形状デザインツールの提案",
-    "[L] Pop-up Print: 双安定な折りたたみ3Dプリント",
-    "[S] 手芸初心者を対象とした猫用ケープの制作支援システム",
-    ], },
-    { session: "セッション4: 認識", talks: [
-    "[L] アクティブ音響センシングを用いた食材認識カトラリー",
-    "[S] （タイトル未公開）",
-    "[S] PartsSweeper: 電子部品や工具をさりげなく整理するインタラクティブ・デスクの試作と応用",
-    ], },
-    { session: "セッション5: 入力インタフェース", talks: [
-    "[L] FieldSweep: 永久磁石の配列とスマートフォン磁気センサを用いた二次元トラッキング手法",
-    "[S] ORANGE: 360度カメラと画像認識技術によるユニバーサルリモコン",
-    "[S] （タイトル未公開）",
-    "[S] ベイズ情報利得を用いたスクリーンキーボードカーソルの効率的移動手法",
-    "[S] JoyFlick: フリック入力に基づくゲームパッド向けかな文字入力手法",
-    ], },
-    { session: "セッション6: 情報提示", talks: [
-    "[L] 画面に映っている食品の味を再現して味わえる味ディスプレイの開発",
-    "[S] 散布図選択による多次元データ可視化へのグラフ彩色問題の適用",
-    "[S] 1対多遠隔コミュニケーションにおける聴衆反応の集合的提示",
-    ], },
-    { session: "セッション7: 教育支援", talks: [
-    "[L] askTA : 消極的な受講生でも質問可能なオンライン演習講義支援システム",
-    "[S] 視覚・聴覚フィードバックによるフィールドホッケーのプッシュ練習支援システムの提案と実装",
-    "[S] SectionsNote: セクションを考慮してレイアウトおよび閲覧できるデジタルノート",
-    ], },
-    ]
+  const archival_sessions = [
+    { session: "セッション1: 行動支援", talks: [ "01", "02", "03" ] },
+    { session: "セッション2: ディスプレイ", talks: [ "04", "05", "06" ]},
+    { session: "セッション3: ものづくり", talks: [ "07", "08", "09" ]},
+    { session: "セッション4: 認識", talks: [ "10", "11", "12" ]},
+    { session: "セッション5: 入力インタフェース", talks: [ "13", "14", "15", "16", "17" ]},
+    { session: "セッション6: 情報提示", talks: [ "18", "19", "20" ]},
+    { session: "セッション7: 教育支援", talks: [ "21", "22", "23" ]},
+  ];
+- 
+  const non_archival_sessions = [
+    { session: "査読なしセッション1", talks: [ "N-01", "N-02", "N-03", "N-04", "N-05", "N-06", "N-07", "N-08", "N-09", "N-10", "N-11", "N-12", "N-13", "N-14", "N-15" ]},
+    { session: "査読なしセッション2", talks: [ "N-16", "N-17", "N-18", "N-19", "N-20", "N-21", "N-22", "N-23", "N-24", "N-25", "N-26", "N-27", "N-28", "N-29" ]},
+  ];
+- const placeholder_image_path = "./assets/representatives/placeholder.jpg"
 
 
 doctype html
@@ -74,7 +50,7 @@ html(lang=ja)
         li 登壇発表（ショート発表）：<b>15分</b> <small>[発表10分・質疑5分]</small>
         li 査読なし発表：<b>5分</b> <small>[発表5分・質疑なし]</small>
       .program
-        each session in temp_data
+        each session in archival_sessions
           hr
           .jumbotron
             h1 #{session["session"]}
@@ -83,17 +59,33 @@ html(lang=ja)
               li.list-inline-item <b>座長：</b>（未定）
               li.list-inline-item <b>チャット座長：</b>（未定）
           each talk in session["talks"]
-            h2 #{talk}
-        //- h2 [1] DanceUnisoner: グループダンスパフォーマンス動画作成インタフェース <span class="badge badge-short">ショート発表</span>
-        //- p.authors 土田 修平，深山 覚，後藤 真孝（産総研）
-        //- .row
-        //-   .col-md-4
-        //-     img.img-fluid.representative(src="./assets/logo/logo.png")
-        //-   .col-md-4
-        //-     h3 要旨：
-        //-     p 複数人でのダンスのイメージを振付師1人でも検討・確認・共有できるグループダンスパフォーマンス動画作成インタフェース DanceUnisoner を開発した．DanceUnisoner では，ダンサー1人が踊っているダンス動画をコピー&ペーストの要領で三次元空間に配置していくことで，グループダンスの動画を手軽に作成できる．グループダンスの人数や配置，向き，大きさ，時間ずれを一括で容易に変更できるシンプルなGUIを備える．
-        //-   .col-md-4
-        //-     h3 採録時コメント：
-        //-     p 集団でのダンスを対象とした振り付け支援システムという、多くの人々にとっては馴染みのない題材ではあるが、現場レベルの様々な要求を満たすべく細かいところまでデザインされており、興味深い。著者らの方法論を他分野へどのように波及させられるかの議論を期待したい。
+            each entry in papers_data
+              if entry["id"] == talk
+                h2 [#{talk}] #{entry["title"]}
+                p.authors #{entry["authors"]}
+                - const csv_data_entry = papers_author_provided_data[parseInt(talk) - 1];
+                - const image_path = csv_data_entry["image"] == "TRUE" ? "./assets/representatives/" + talk + ".jpg" : placeholder_image_path;
+                .row
+                  .col-md-4
+                    img.img-fluid.img-thumbnail.representative(src=image_path)
+                  .col-md-4
+                    h3 要旨：
+                    p #{papers_author_provided_data[parseInt(talk) - 1]["abstract"]}
+                  .col-md-4
+                    h3 採録時コメント：
+                    p （準備中）
+        each session in non_archival_sessions
+          hr
+          .jumbotron
+            h1 #{session["session"]}
+            ul.list-inline
+              //- li.list-inline-item <b>日時：</b>XX/XX XX:XX&mdash;XX:XX
+              li.list-inline-item <b>座長：</b>（未定）
+              li.list-inline-item <b>チャット座長：</b>（未定）
+          each talk in session["talks"]
+            each entry in papers_data
+              if entry["id"] == talk
+                h2 [#{talk}] #{entry["title"]}
+                p.authors #{entry["authors"]}
     include includes/footer
     include includes/bootstrap-js
