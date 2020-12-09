@@ -14,6 +14,8 @@ const menu_data_path = "src/data/menu.yml";
 const schedule_data_path = "src/data/schedule.yml"
 const organizing_committee_data_path = "src/data/organizing-committee.yml"
 const program_committee_data_path = "src/data/program-committee.csv"
+const papers_author_provided_data_path = "src/data/papers.csv"
+const papers_data_path = "src/data/papers.json"
 
 gulp.task('asset-processing', function(done) {
     // Compress committee member portraits and copy them to the destination directory
@@ -29,13 +31,25 @@ gulp.task('asset-processing', function(done) {
             .toFile("dst/assets/committee/" + name + ".jpg");
     });
 
+    // Compress representative images and copy them to the destination directory
+    const representative_files = glob.sync("src/assets/representatives/*.*");
+    fs.mkdirSync("dst/assets/representatives", {recursive: true });
+    representative_files.forEach(function(file) {
+        const name = file.substring(file.lastIndexOf('/') + 1).replace(".jpg", "").replace(".png", "");
+        sharp(file)
+            .flatten({ background: { r: 255, g: 255, b: 255 }})
+            .resize({ width: 600, height: 450, fit: "cover" })
+            .jpeg({ quality: quality })
+            .toFile("dst/assets/representatives/" + name + ".jpg");
+    });
+
     // Compress sponsor logos and copy them to the destination directory
     const sponsor_logo_files = glob.sync("src/assets/sponsors/*.*");
     fs.mkdirSync("dst/assets/sponsors", {recursive: true });
     sponsor_logo_files.forEach(function(file) {
         const name = file.substring(file.lastIndexOf('/') + 1).replace(".jpg", "").replace(".png", "");
         sharp(file)
-            .resize({ width: 400, height: 200, fit: "contain", background: {r: 0, g: 0, b: 0, alpha: 0.0}})
+            .resize({ width: 400, height: 200, fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0.0 } })
             .png()
             .toFile("dst/assets/sponsors/" + name + ".png");
     });
@@ -69,6 +83,10 @@ gulp.task('pug', function(done) {
 
     // Read CSV files
     const program_committee_data = csvParse(fs.readFileSync(program_committee_data_path), {columns: true});
+    const papers_author_provided_data = csvParse(fs.readFileSync(papers_author_provided_data_path), {columns: true});
+
+    // Read JSON files
+    const papers_data = JSON.parse(fs.readFileSync(papers_data_path))
 
     gulp.src("src/*.pug")
         .pipe(data(function(file) {
@@ -76,7 +94,9 @@ gulp.task('pug', function(done) {
                 menu_data: menu_data,
                 organizing_committee_data: organizing_committee_data,
                 schedule_data: schedule_data,
-                program_committee_data: program_committee_data
+                program_committee_data: program_committee_data,
+                papers_author_provided_data: papers_author_provided_data,
+                papers_data: papers_data
             };
         }))
         .pipe(pug({ pretty: true }))
