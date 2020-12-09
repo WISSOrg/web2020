@@ -30,10 +30,10 @@
   label: live-streaming
 - category_name: 予稿集
   pages:
-  - name: ウェブ予稿集（準備中）
-    url: ""
-  - name: 電子予稿集（準備中）
-    url: ""
+  - name: ウェブ予稿集
+    url: "https://www.wiss.org/WISS2020Proceedings/"
+  - name: 電子予稿集
+    url: "./downloads/proceedings.pdf"
   label: proceedings
 - category_name: WISSについて
   pages:
