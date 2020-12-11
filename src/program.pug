@@ -47,15 +47,39 @@
   ];
 - 
   const non_archival_sessions = [
-    { 
+    {
       session: "査読なしセッション1", 
-      talks: [ "N-01", "N-02", "N-03", "N-04", "N-05", "N-06", "N-07", "N-08", "N-09", "N-10", "N-11", "N-12", "N-13", "N-14", "N-15" ],
+      talks: [ "N-01", "N-02", "N-03", "N-04", "N-05" ],
       session_chair: "（未定）",
       chat_chair: "（未定）",
     },
-    { 
+    {
       session: "査読なしセッション2", 
-      talks: [ "N-16", "N-17", "N-18", "N-19", "N-20", "N-21", "N-22", "N-23", "N-24", "N-25", "N-26", "N-27", "N-28", "N-29" ],
+      talks: [ "N-06", "N-07", "N-08", "N-09", "N-10" ],
+      session_chair: "（未定）",
+      chat_chair: "（未定）",
+    },
+    {
+      session: "査読なしセッション3", 
+      talks: [ "N-11", "N-12", "N-13", "N-14", "N-15" ],
+      session_chair: "（未定）",
+      chat_chair: "（未定）",
+    },
+    {
+      session: "査読なしセッション4",
+      talks: [ "N-16", "N-17", "N-18", "N-19", "N-20" ],
+      session_chair: "（未定）",
+      chat_chair: "（未定）",
+    },
+    {
+      session: "査読なしセッション5", 
+      talks: [ "N-21", "N-22", "N-23", "N-24", "N-25" ],
+      session_chair: "（未定）",
+      chat_chair: "（未定）",
+    },
+    {
+      session: "査読なしセッション6", 
+      talks: [ "N-26", "N-27", "N-28", "N-29" ],
       session_chair: "（未定）",
       chat_chair: "（未定）",
     },
@@ -92,7 +116,7 @@ html(lang=ja)
       ul
         li 登壇発表（ロング発表）：<b>25分</b> <small>[発表15分・質疑10分]</small>
         li 登壇発表（ショート発表）：<b>15分</b> <small>[発表10分・質疑5分]</small>
-        li 査読なし発表：<b>5分</b> <small>[発表5分・質疑なし]</small>
+        li 査読なし発表：<b>5分</b> <small>[発表5分・質疑はセッション毎にまとめて実施]</small>
       .program
         each session in archival_sessions
           hr
