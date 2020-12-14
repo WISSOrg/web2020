@@ -25,8 +25,8 @@
   label: program
 - category_name: 動画中継
   pages:
-  - name: "（準備中）"
-    url: ""
+  - name: "YouTube Live"
+    url: "https://www.youtube.com/user/wissarchives/videos"
   label: live-streaming
 - category_name: 予稿集
   pages:
