@@ -25,8 +25,12 @@
   label: program
 - category_name: 動画中継
   pages:
-  - name: "YouTube Live"
-    url: "https://www.youtube.com/user/wissarchives/videos"
+  - name: "1日目"
+    url: "https://www.youtube.com/watch?v=CJTAvD62IZQ"
+  - name: "2日目"
+    url: "https://www.youtube.com/watch?v=-hsQmD_KtCU"
+  - name: "3日目"
+    url: "https://www.youtube.com/watch?v=zU9Y5EUVP8Q"
   label: live-streaming
 - category_name: 予稿集
   pages:
