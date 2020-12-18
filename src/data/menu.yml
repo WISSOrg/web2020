@@ -47,6 +47,6 @@
     url: "https://twitter.com/wiss_official"
   - name: WISS委員一覧
     url: "./committee.html"
-  - name: 表彰（準備中）
-    url: ""
+  - name: 表彰
+    url: "./award.html"
   label: about-wiss
