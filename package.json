@@ -18,6 +18,6 @@
   "license": "UNLICENSED",
   "dependencies": {
     "csv-parse": "^4.12.0",
-    "sharp": "^0.26.1"
+    "sharp": "^0.30.5"
   }
 }
